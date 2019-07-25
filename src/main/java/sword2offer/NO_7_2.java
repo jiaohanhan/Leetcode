@@ -5,9 +5,6 @@ package sword2offer;
  *
  * 解题思路：因为年龄都在0~99，所以是一个小范围排序，可以记录下
  *      每个年龄出现的次数，再处理
- *
- * @author 焦含寒
- *
  */
 public class NO_7_2 {
 
