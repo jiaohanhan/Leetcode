@@ -60,35 +60,36 @@ public class NO_25 {
 
     }
 
+    static class BT_Node {
+        private int data;
+        private BT_Node LChild;
+        private BT_Node RChild;
+
+        public BT_Node(int data) {
+            super();
+            this.data = data;
+        }
+
+        public int getData() {
+            return data;
+        }
+        public void setData(int data) {
+            this.data = data;
+        }
+        public BT_Node getLChild() {
+            return LChild;
+        }
+        public void setLChild(BT_Node lChild) {
+            LChild = lChild;
+        }
+        public BT_Node getRChild() {
+            return RChild;
+        }
+        public void setRChild(BT_Node rChild) {
+            RChild = rChild;
+        }
+    }
 }
 
-class BT_Node {
-    private int data;
-    private BT_Node LChild;
-    private BT_Node RChild;
 
-    public BT_Node(int data) {
-        super();
-        this.data = data;
-    }
-
-    public int getData() {
-        return data;
-    }
-    public void setData(int data) {
-        this.data = data;
-    }
-    public BT_Node getLChild() {
-        return LChild;
-    }
-    public void setLChild(BT_Node lChild) {
-        LChild = lChild;
-    }
-    public BT_Node getRChild() {
-        return RChild;
-    }
-    public void setRChild(BT_Node rChild) {
-        RChild = rChild;
-    }
-}
 

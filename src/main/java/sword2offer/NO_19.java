@@ -45,35 +45,37 @@ public class NO_19 {
             print(root.getRChild());
         }
     }
+
+    static class BTNode{
+        private int data;
+        private BTNode LChild;
+        private BTNode RChild;
+
+        public BTNode(int data) {
+            super();
+            this.data = data;
+        }
+        public BTNode getLChild() {
+            return LChild;
+        }
+        public void setLChild(BTNode lChild) {
+            LChild = lChild;
+        }
+        public BTNode getRChild() {
+            return RChild;
+        }
+        public void setRChild(BTNode rChild) {
+            RChild = rChild;
+        }
+
+        public int getData() {
+            return data;
+        }
+        public void setData(int data) {
+            this.data = data;
+        }
+
+    }
 }
 
-class BTNode{
-    private int data;
-    private BTNode LChild;
-    private BTNode RChild;
 
-    public BTNode(int data) {
-        super();
-        this.data = data;
-    }
-    public BTNode getLChild() {
-        return LChild;
-    }
-    public void setLChild(BTNode lChild) {
-        LChild = lChild;
-    }
-    public BTNode getRChild() {
-        return RChild;
-    }
-    public void setRChild(BTNode rChild) {
-        RChild = rChild;
-    }
-
-    public int getData() {
-        return data;
-    }
-    public void setData(int data) {
-        this.data = data;
-    }
-
-}

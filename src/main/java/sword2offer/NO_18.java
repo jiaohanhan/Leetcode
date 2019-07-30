@@ -58,36 +58,39 @@ public class NO_18 {
         return doseTree1HaveTree2(root1.getLChild(), root2.getLChild())
                 && doseTree1HaveTree2(root1.getRChild(), root2.getRChild());
     }
+
+    static class BinaryTreeNode{
+        private int data;
+        private BinaryTreeNode LChild;
+        private BinaryTreeNode RChild;
+
+
+        public BinaryTreeNode(int data) {
+            super();
+            this.data = data;
+        }
+        public int getData() {
+            return data;
+        }
+        public void setData(int data) {
+            this.data = data;
+        }
+        public BinaryTreeNode getLChild() {
+            return LChild;
+        }
+        public void setLChild(BinaryTreeNode lChild) {
+            LChild = lChild;
+        }
+        public BinaryTreeNode getRChild() {
+            return RChild;
+        }
+        public void setRChild(BinaryTreeNode rChild) {
+            RChild = rChild;
+        }
+
+    }
+
 }
 
-class BinaryTreeNode{
-    private int data;
-    private BinaryTreeNode LChild;
-    private BinaryTreeNode RChild;
 
-
-    public BinaryTreeNode(int data) {
-        super();
-        this.data = data;
-    }
-    public int getData() {
-        return data;
-    }
-    public void setData(int data) {
-        this.data = data;
-    }
-    public BinaryTreeNode getLChild() {
-        return LChild;
-    }
-    public void setLChild(BinaryTreeNode lChild) {
-        LChild = lChild;
-    }
-    public BinaryTreeNode getRChild() {
-        return RChild;
-    }
-    public void setRChild(BinaryTreeNode rChild) {
-        RChild = rChild;
-    }
-
-}
 

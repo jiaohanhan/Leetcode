@@ -43,33 +43,34 @@ public class NO_23 {
         }
     }
 
-}
-class MBtNode{
-    private int data;
-    private MBtNode LChild;
-    private MBtNode RChild;
-    public MBtNode(int data) {
-        super();
-        this.data = data;
-    }
-    public int getData() {
-        return data;
-    }
-    public void setData(int data) {
-        this.data = data;
-    }
-    public MBtNode getLChild() {
-        return LChild;
-    }
-    public void setLChild(MBtNode lChild) {
-        LChild = lChild;
-    }
-    public MBtNode getRChild() {
-        return RChild;
-    }
-    public void setRChild(MBtNode rChild) {
-        RChild = rChild;
-    }
+    static class MBtNode{
+        private int data;
+        private MBtNode LChild;
+        private MBtNode RChild;
+        public MBtNode(int data) {
+            super();
+            this.data = data;
+        }
+        public int getData() {
+            return data;
+        }
+        public void setData(int data) {
+            this.data = data;
+        }
+        public MBtNode getLChild() {
+            return LChild;
+        }
+        public void setLChild(MBtNode lChild) {
+            LChild = lChild;
+        }
+        public MBtNode getRChild() {
+            return RChild;
+        }
+        public void setRChild(MBtNode rChild) {
+            RChild = rChild;
+        }
 
+    }
 }
+
 

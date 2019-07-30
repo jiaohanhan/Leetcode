@@ -80,37 +80,35 @@ public class NO_5 {
         while (!stack.isEmpty())
             System.out.print(stack.pop().getData() + " ");
     }
-}
 
-class Node {
-    private String data;
-    private Node next;
 
-    public Node(String data) {
-        super();
-        this.data = data;
-    }
+    static class Node {
+        private String data;
+        private Node next;
 
-    public Node(String data, Node next) {
-        super();
-        this.data = data;
-        this.next = next;
-    }
+        public Node(String data) {
+            super();
+            this.data = data;
+        }
 
-    public String getData() {
-        return data;
-    }
+        public String getData() {
+            return data;
+        }
 
-    public void setData(String data) {
-        this.data = data;
-    }
+        public void setData(String data) {
+            this.data = data;
+        }
 
-    public Node getNext() {
-        return next;
-    }
+        public Node getNext() {
+            return next;
+        }
 
-    public void setNext(Node next) {
-        this.next = next;
+        public void setNext(Node next) {
+            this.next = next;
+        }
+
     }
 
 }
+
+

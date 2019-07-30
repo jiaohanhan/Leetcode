@@ -24,34 +24,35 @@ public class NO_21 {
         mStack.push(11);
         System.out.println(mStack.min());
     }
-}
 
-class MyStack {
-    private Stack<Integer> stack1;
-    private Stack<Integer> stackHelp;
+    static class MyStack {
+        private Stack<Integer> stack1;
+        private Stack<Integer> stackHelp;
 
-    public MyStack() {
-        stack1 = new Stack<Integer>();
-        stackHelp = new Stack<Integer>();
-    }
+        public MyStack() {
+            stack1 = new Stack<Integer>();
+            stackHelp = new Stack<Integer>();
+        }
 
-    public void push(int num) {
-        stack1.push(num);
-        if (stackHelp.size() == 0 || num < stackHelp.peek()) {
-            stackHelp.push(num);
-        } else {
-            stackHelp.push(stackHelp.peek());
+        public void push(int num) {
+            stack1.push(num);
+            if (stackHelp.size() == 0 || num < stackHelp.peek()) {
+                stackHelp.push(num);
+            } else {
+                stackHelp.push(stackHelp.peek());
+            }
+        }
+
+        public void pop() {
+            stack1.pop();
+            stackHelp.pop();
+        }
+
+        public Integer min() {
+            if (stackHelp.size() == 0)
+                return null;
+            return stackHelp.peek();
         }
     }
-
-    public void pop() {
-        stack1.pop();
-        stackHelp.pop();
-    }
-
-    public Integer min() {
-        if (stackHelp.size() == 0)
-            return null;
-        return stackHelp.peek();
-    }
 }
+

@@ -53,33 +53,29 @@ public class NO_15_1 {
             temp2 = temp2.getNext();
 
         }
-
-
         return temp2.getData();
     }
 
+    static class My_Node{
+        private String data;
+        private My_Node next;
+
+        public My_Node(String data) {
+            this.data = data;
+        }
+        public String getData() {
+            return data;
+        }
+        public void setData(String data) {
+            this.data = data;
+        }
+        public My_Node getNext() {
+            return next;
+        }
+        public void setNext(My_Node next) {
+            this.next = next;
+        }
+    }
 }
 
-class My_Node{
-    private String data;
-    private My_Node next;
 
-
-    public My_Node(String data) {
-        super();
-        this.data = data;
-    }
-
-    public String getData() {
-        return data;
-    }
-    public void setData(String data) {
-        this.data = data;
-    }
-    public My_Node getNext() {
-        return next;
-    }
-    public void setNext(My_Node next) {
-        this.next = next;
-    }
-}

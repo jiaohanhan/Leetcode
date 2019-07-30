@@ -45,31 +45,33 @@ public class NO_16 {
         return curMyNode;
     }
 
+
+    static class MyNode {
+        private String data;
+        private MyNode next;
+
+        public MyNode(String data) {
+            super();
+            this.data = data;
+        }
+
+        public String getData() {
+            return data;
+        }
+
+        public void setData(String data) {
+            this.data = data;
+        }
+
+        public MyNode getNext() {
+            return next;
+        }
+
+        public void setNext(MyNode next) {
+            this.next = next;
+        }
+
+    }
 }
 
-class MyNode {
-    private String data;
-    private MyNode next;
 
-    public MyNode(String data) {
-        super();
-        this.data = data;
-    }
-
-    public String getData() {
-        return data;
-    }
-
-    public void setData(String data) {
-        this.data = data;
-    }
-
-    public MyNode getNext() {
-        return next;
-    }
-
-    public void setNext(MyNode next) {
-        this.next = next;
-    }
-
-}

@@ -61,27 +61,29 @@ public class NO_17 {
             print(root.getNext());
         }
     }
+
+    static class M_Node{
+        private int data;
+        private M_Node next;
+
+        public M_Node(int data) {
+            super();
+            this.data = data;
+        }
+        public int getData() {
+            return data;
+        }
+        public void setData(int data) {
+            this.data = data;
+        }
+        public M_Node getNext() {
+            return next;
+        }
+        public void setNext(M_Node next) {
+            this.next = next;
+        }
+    }
 }
 
-class M_Node{
-    private int data;
-    private M_Node next;
 
-    public M_Node(int data) {
-        super();
-        this.data = data;
-    }
-    public int getData() {
-        return data;
-    }
-    public void setData(int data) {
-        this.data = data;
-    }
-    public M_Node getNext() {
-        return next;
-    }
-    public void setNext(M_Node next) {
-        this.next = next;
-    }
-}
 

@@ -38,27 +38,27 @@ public class NO_15_2 {
         return slow;
     }
 
-}
-class MNode{
-    private String data;
-    private MNode next;
+    static class MNode{
+        private String data;
+        private MNode next;
 
-    public MNode(String data) {
-        super();
-        this.data = data;
-    }
+        public MNode(String data) {
+            super();
+            this.data = data;
+        }
 
-    public String getData() {
-        return data;
-    }
-    public void setData(String data) {
-        this.data = data;
-    }
-    public MNode getNext() {
-        return next;
-    }
-    public void setNext(MNode next) {
-        this.next = next;
+        public String getData() {
+            return data;
+        }
+        public void setData(String data) {
+            this.data = data;
+        }
+        public MNode getNext() {
+            return next;
+        }
+        public void setNext(MNode next) {
+            this.next = next;
+        }
     }
 
 }

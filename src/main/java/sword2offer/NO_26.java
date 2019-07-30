@@ -56,11 +56,9 @@ public class NO_26 {
     }
 
     private static void copySiblingNodes(ComplexListNode head) {
-        // TODO Auto-generated method stub
         ComplexListNode node = head;
         while (node != null) {
             ComplexListNode cloneNode = node.next;
-
             if (node.sibling != null)
                 cloneNode.sibling = node.sibling.next;
             node = cloneNode.next;
@@ -69,7 +67,6 @@ public class NO_26 {
     }
 
     private static void colneNodes(ComplexListNode head) {
-        // TODO Auto-generated method stub
         ComplexListNode node = head;
         while (node != null) {
             ComplexListNode cloneNode = new ComplexListNode(node.data);
@@ -77,18 +74,18 @@ public class NO_26 {
             node.next = cloneNode;
             node = cloneNode.next;
         }
-
     }
 
-}
+    static class ComplexListNode {
+        int data;
+        ComplexListNode next;
+        ComplexListNode sibling;
 
-class ComplexListNode {
-    int data;
-    ComplexListNode next;
-    ComplexListNode sibling;
-
-    public ComplexListNode(int data) {
-        super();
-        this.data = data;
+        public ComplexListNode(int data) {
+            super();
+            this.data = data;
+        }
     }
 }
+
+
