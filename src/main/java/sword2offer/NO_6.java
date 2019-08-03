@@ -25,71 +25,72 @@ public class NO_6 {
         tree.postRootTraverse(tree.root);
     }
 
-}
+    static class BiTree{
+        TreeNode root;
 
-class BiTree{
-    TreeNode root;
+        public BiTree(String preOrder,String midOrder, int count){
+            if(count <= 0)
+                return;
 
-    public BiTree(String preOrder,String midOrder, int count){
-        if(count <= 0)
-            return;
+            //找到根结点所在位置
+            int i = 0;
+            for (; i < count; i++) {
+                if (midOrder.charAt(i) == preOrder.charAt(0))  break;
+            }
 
-        //找到根结点所在位置
-        int i = 0;
-        for (; i < count; i++) {
-            if (midOrder.charAt(i) == preOrder.charAt(0))  break;
+            root = new TreeNode(preOrder.charAt(0));
+            root.setLChild(new BiTree(preOrder.substring(1, i+1),
+                    midOrder.substring(0,i), i).root);
+            root.setRChild(new BiTree(preOrder.substring(i+1),
+                    midOrder.substring(i+1), count-i-1).root);
         }
 
-        root = new TreeNode(preOrder.charAt(0));
-        root.setLChild(new BiTree(preOrder.substring(1, i+1),
-                midOrder.substring(0,i), i).root);
-        root.setRChild(new BiTree(preOrder.substring(i+1),
-                midOrder.substring(i+1), count-i-1).root);
+        public void postRootTraverse(TreeNode root){
+            if(root != null){
+                postRootTraverse(root.getLChild());
+                postRootTraverse(root.getRChild());
+                System.out.print(root.getData());
+            }
+        }
     }
 
-    public void postRootTraverse(TreeNode root){
-        if(root != null){
-            postRootTraverse(root.getLChild());
-            postRootTraverse(root.getRChild());
-            System.out.print(root.getData());
+    static class TreeNode {
+
+        private char data;
+        private TreeNode LChild;
+        private TreeNode RChild;
+
+        public TreeNode(char data){
+            super();
+            this.data = data;
+        }
+
+        public TreeNode(char data, TreeNode LChild, TreeNode RChild) {
+            super();
+            this.data = data;
+            this.LChild = LChild;
+            this.RChild = RChild;
+        }
+        public char getData() {
+            return data;
+        }
+        public void setData(char data) {
+            this.data = data;
+        }
+        public TreeNode getLChild() {
+            return LChild;
+        }
+        public void setLChild(TreeNode LChild) {
+            this.LChild = LChild;
+        }
+        public TreeNode getRChild() {
+            return RChild;
+        }
+        public void setRChild(TreeNode RChild) {
+            this.RChild = RChild;
         }
     }
 }
 
-class TreeNode {
 
-    private char data;
-    private TreeNode LChild;
-    private TreeNode RChild;
-
-    public TreeNode(char data){
-        super();
-        this.data = data;
-    }
-
-    public TreeNode(char data, TreeNode LChild, TreeNode RChild) {
-        super();
-        this.data = data;
-        this.LChild = LChild;
-        this.RChild = RChild;
-    }
-    public char getData() {
-        return data;
-    }
-    public void setData(char data) {
-        this.data = data;
-    }
-    public TreeNode getLChild() {
-        return LChild;
-    }
-    public void setLChild(TreeNode LChild) {
-        this.LChild = LChild;
-    }
-    public TreeNode getRChild() {
-        return RChild;
-    }
-    public void setRChild(TreeNode RChild) {
-        this.RChild = RChild;
-    }
-}
 
